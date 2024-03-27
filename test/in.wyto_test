@@ -1,0 +1,143 @@
+# NVT(dt = 1.0fs)
+clear
+variable        dt1            equal 0.001
+variable        cfgFile         string  "SiO2_Si_interface.data"
+variable        temperature_ini equal 300.0
+variable        temperature_fin equal 300.0
+variable        seed            equal 12345
+variable        output_freq     equal 100
+variable        xlo             equal xlo
+variable        xhi             equal xhi
+variable        ylo             equal ylo
+variable        yhi             equal yhi
+variable        zlo             equal zlo
+variable        zhi_fix1        equal zlo+2
+variable        zhi_fix2        equal zhi-2
+variable        zhi             equal zhi
+variable        xy              equal xy
+variable        yz              equal yz
+variable        xz              equal xz
+
+units           metal
+atom_style      atomic
+boundary        p p m
+read_data       ${cfgFile}
+neighbor        2.0 bin
+pair_style      wyto
+pair_coeff      * * SiO.wyto Si O
+timestep        ${dt1}
+thermo          1
+thermo_style    custom step time temp etotal econserve press vol
+
+# fix the Si atoms at the bottom of the Si crystal.
+region          fixRegion1 prism ${xlo} ${xhi} ${ylo} ${yhi} ${zlo} ${zhi_fix1} ${xy} ${yz} ${xz}
+group           fixGroup1 region fixRegion1
+region          normalRegion prism ${xlo} ${xhi} ${ylo} ${yhi} ${zhi_fix1} ${zhi} ${xy} ${yz} ${xz}
+group           normalGroup region normalRegion
+fix             freeze fixGroup1 setforce 0.0 0.0 0.0
+
+velocity        normalGroup create ${temperature_ini} ${seed}
+fix             INT normalGroup nvt temp ${temperature_ini} ${temperature_fin} 0.1
+dump            mydump all custom ${output_freq} NVTdt1fs.traj id x y z element fx fy fz
+dump_modify     mydump element Si O
+dump_modify     mydump sort id
+run             10000
+unfix           INT
+undump          mydump
+reset_timestep  0 time 0
+
+# NVT(dt = 0.5fs)
+clear
+variable        dt05            equal 0.0005
+variable        cfgFile         string "SiO2_Si_interface.data"
+variable        temperature_ini equal 300.0
+variable        temperature_fin equal 300.0
+variable        seed            equal 12345
+variable        output_freq     equal 100
+variable    xlo             equal xlo
+variable    xhi             equal xhi
+variable    ylo             equal ylo
+variable    yhi             equal yhi
+variable    zlo             equal zlo
+variable    zhi_fix1        equal zlo+2.0
+variable    zhi_fix2        equal zhi-2.0
+variable    zhi             equal zhi
+variable    xy              equal xy
+variable    yz              equal yz
+variable    xz              equal xz
+
+units           metal
+atom_style      atomic
+boundary        p p m
+read_data       ${cfgFile}
+neighbor        2.0 bin
+pair_style      wyto
+pair_coeff      * * SiO.wyto Si O
+timestep        ${dt05}
+thermo          1
+thermo_style    custom step time temp etotal econserve press vol
+
+# fix the Si atoms at the bottom of the Si crystal.
+region          fixRegion1 prism ${xlo} ${xhi} ${ylo} ${yhi} ${zlo} ${zhi_fix1} ${xy} ${yz} ${xz}
+group           fixGroup1 region fixRegion1
+region          normalRegion prism ${xlo} ${xhi} ${ylo} ${yhi} ${zhi_fix1} ${zhi} ${xy} ${yz} ${xz}
+group           normalGroup region normalRegion
+fix             freeze fixGroup1 setforce 0.0 0.0 0.0
+
+velocity        normalGroup create ${temperature_ini} ${seed}
+fix             INT normalGroup nvt temp ${temperature_ini} ${temperature_fin} 0.1
+dump            mydump all custom ${output_freq} NVTdt05fs.traj id x y z element fx fy fz
+dump_modify     mydump element Si O
+dump_modify     mydump sort id
+run             20000
+unfix           INT
+undump          mydump
+reset_timestep  0 time 0
+
+# NVT(dt = 0.1fs)
+clear
+variable        dt01            equal 0.0001
+variable        cfgFile         string "SiO2_Si_interface.data"
+variable        temperature_ini equal 300.0
+variable        temperature_fin equal 300.0
+variable        seed            equal 12345
+variable        output_freq     equal 100
+variable    xlo             equal xlo
+variable    xhi             equal xhi
+variable    ylo             equal ylo
+variable    yhi             equal yhi
+variable    zlo             equal zlo
+variable    zhi_fix1        equal zlo+2.0
+variable    zhi_fix2        equal zhi-2.0
+variable    zhi             equal zhi
+variable    xy              equal xy
+variable    yz              equal yz
+variable    xz              equal xz
+
+units           metal
+atom_style      atomic
+boundary        p p m
+read_data       ${cfgFile}
+neighbor        2.0 bin
+pair_style      wyto
+pair_coeff      * * SiO.wyto Si O
+timestep        ${dt01}
+thermo          1
+
+# fix the Si atoms at the bottom of the Si crystal.
+region          fixRegion1 prism ${xlo} ${xhi} ${ylo} ${yhi} ${zlo} ${zhi_fix1} ${xy} ${yz} ${xz}
+group           fixGroup1 region fixRegion1
+region          normalRegion prism ${xlo} ${xhi} ${ylo} ${yhi} ${zhi_fix1} ${zhi} ${xy} ${yz} ${xz}
+group           normalGroup region normalRegion
+fix             freeze fixGroup1 setforce 0.0 0.0 0.0
+
+thermo_style    custom step time temp etotal econserve press vol
+velocity        normalGroup create ${temperature_ini} ${seed}
+fix             INT normalGroup nvt temp ${temperature_ini} ${temperature_fin} 0.1
+dump            mydump all custom ${output_freq} NVTdt01fs.traj id x y z element fx fy fz
+dump_modify     mydump element Si O
+dump_modify     mydump sort id
+run             100000
+unfix           INT
+undump          mydump
+reset_timestep  0 time 0
