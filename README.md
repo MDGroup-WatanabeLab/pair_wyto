@@ -37,5 +37,5 @@
 
 ## Reference
 [1] Watanabe, T., Fujiwara, H., Noguchi, H., Hoshino, T., & Ohdomari, I. (1999). Jpn. J. Appl. Phys., 38(4A), L366.   
-[2] Watanabe, T., Yamasaki, D., Tatsumura, K., & Ohdomari, I. (2004). Appl. Surf. Sci, 234(1-4), 207-213.
+[2] Watanabe, T., Yamasaki, D., Tatsumura, K., & Ohdomari, I. (2004). Appl. Surf. Sci, 234(1-4), 207-213.  
 [3] Watanabe, T., Tatsumura, K., & Ohdomari, I. (2004). Appl. Surf. Sci, 237(1-4), 125-133.
