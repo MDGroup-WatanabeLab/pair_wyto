@@ -25,14 +25,14 @@
 
 - In this test, please check that the Hamiltonian is conserved more accurately with shoter time steps.
 
-## Oxilayer
-- Oxilayer is a python script to generate SiO2/Si interface structure models by layer-by-layer oxidation.
-  - The script and detailed information can be found in `oxilayer` directory.
+## oxi_si
+- oxi_si is a python script to generate SiO2/Si interface structure models by layer-by-layer oxidation.
+  - The script and detailed information can be found in `oxi_si` directory.
   - The idea for modeling the SiO2/Si interface structure is based on the paper [3].
 
 ## Credit
 - Kentaro Hirai (Waseda University): Pair style code development
-- Kotaro Takematsu (Waseda University): Oxilayer code development
+- Kotaro Takematsu (Waseda University): oxi_si code development
 - Takanobu Watanabe (Waseda University): Code debugging assistance
 
 ## Reference
