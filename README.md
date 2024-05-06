@@ -31,7 +31,7 @@
   - The idea for modeling the SiO2/Si interface structure is based on the paper [3].
 
 ## Citation
-- If you use this software in your research, please use the 'cite this repository' button in the sidebar to cite the repository and the paper [2]."
+- If you use this software in your research, please cite this repository (use 'Cite this repository' button in the sidebar) and the paper [2]."
 
 ## Credit
 - Kentaro Hirai (Waseda University): Pair style code development
