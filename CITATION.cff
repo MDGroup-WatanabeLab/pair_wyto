@@ -1,0 +1,23 @@
+authors:
+  - family-names: Hirai
+    given-names: Kentaro
+  - family-names: Takematsu
+    given-names: Kotaro
+  - family-names: Watanabe
+    given-names: Takanobu
+cff-version: 1.2.0
+references:
+  - authors:
+    - family-names: Watanabe
+      given-names: T.
+    - family-names: Yamasaki
+      given-names: D.
+    - family-names: Tatsumura
+      given-names: K.
+    - family-names: Ohdomari
+      given-names: I.    
+  title: "Improved interatomic potential for stressed Si, O mixed systems"
+  type: article
+message: "If you use this software, please cite it using these metadata."
+repository-code: "https://github.com/kenc713/pair_wyto.git"
+title: "pair_wyto"
