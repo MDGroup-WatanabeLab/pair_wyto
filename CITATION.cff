@@ -8,23 +8,22 @@ authors:
   - family-names: "Watanabe"
     given-names: "Takanobu"
 references:
-  authors:
-    - family-names: Watanabe
-      given-names: T.
-    - family-names: Yamasaki
-      given-names: D.
-    - family-names: Tatsumura
-      given-names: K.
-    - family-names: Ohdomari
-      given-names: I.    
-  title: "Improved interatomic potential for stressed Si, O mixed systems"
-  type: article
-  journal: "Appl. Surf. Sci"
-  start: 207 # First page number
-  end: 213 # Last page number
-  issue: 1-4
-  volume: 234
-  year: 2004
+  - type: article
+    authors:
+      - family-names: "Watanabe"
+        given-names: "T."
+      - family-names: "Yamasaki"
+        given-names: "D."
+      - family-names: "Tatsumura"
+        given-names: "K."
+      - family-names: "Ohdomari"
+        given-names: "I."
+    title: "Improved interatomic potential for stressed Si, O mixed systems"
+    journal: "Appl. Surf. Sci"
+    volume: 234
+    issue: "1-4"
+    pages: "207-213"
+    year: 2004
 title: "pair_wyto"
 version: 1.0.0
 date-released: 2024-05-06
