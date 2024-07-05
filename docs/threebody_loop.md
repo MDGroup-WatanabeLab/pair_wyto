@@ -1,5 +1,5 @@
-# Threebody loop
-
+# Three-body loop
+- A term-oriented three-body energy and force calculation routine (refer to this for term orientation).
 ## Setting formulas and characters
 
 $$ \Lambda_n(i,j,k)=\lambda_n(z_i) \Lambda_n^{\prime}(r_{ij},r_{ik}) $$
