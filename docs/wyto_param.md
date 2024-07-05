@@ -1,6 +1,4 @@
 # Parameters for wfnho
-- ポテンシャルパラメータを表形式で整理
-
 ## Main parameter
 
 |$i$|$j$|$k$|$\varepsilon$|$\sigma$|$\mu_{1,jik}$|$\mu_{2,jik}$|$\nu_{1,jik}$|$\nu_{2,jik}$|$\xi_{1,jik}$|$\xi_{2,jik}$|$z^0_{1,jik}$|$z^0_{2,jik}$|$a^{ij}_{1,jik}$|$a^{ij}_{2,jik}$|$a^{ik}_{1,jik}$|$a^{ik}_{2,jik}$|$\gamma^{ij}_{1,jik}$|$\gamma^{ij}_{2,jik}$|$\gamma^{ik}_{1,jik}$|$\gamma^{ik}_{2,jik}$|$\cos{\theta^0_{1,jik}}$|$\cos{\theta^0_{2,jik}}$|$\alpha_{1, jik}$|$\alpha_{2, jik}$|$A_{ij}$|$B_{ij}$|$p_{ij}$|$q_{ij}$|$a_{ij}$|
