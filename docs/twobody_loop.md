@@ -1,5 +1,5 @@
-# Twobody loop
-
+# Two-body loop
+- A term-oriented two-body energy and force calculation routine (refer to [this](https://www.watanabe-lab.jp/blog/archives/2328) for term orientation).
 ## Setting formulas and characters
 
 $$f_2(r_{ij}) = A_{ij}(B_{ij}r_{ij}^{-p_{ij}}-r_{ij}^{-q_{ij}})\exp[(r_{ij}-a_{ij})^{-1}]$$
