@@ -40,7 +40,7 @@ using namespace LAMMPS_NS;
 #define THREEBODY 1
 
 //#define DEBUG
-/*
+
 #ifdef DEBUG
 #define LOG(message) std::cout << message << std::endl;
 #define ROOT_LOG(proc_num, message) if (proc_num == 0) std::cout << message << std::endl;
@@ -50,7 +50,7 @@ using namespace LAMMPS_NS;
 #endif
 #define PRINT(message) std::cout << message << std::endl;
 #define ROOT_PRINT(proc_num, message) if (proc_num == 0) std::cout << message << std::endl;
-*/
+
 //using namespace std;
 
 
